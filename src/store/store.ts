@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './slices/counterSlice'
-import AsyncThunkReducer from './slices/asyncThunkSlice'
+import asyncThunkReducer from './slices/asyncThunkSlice'
+import entityAdaptorReducer from './slices/entityAdaptorSlice'
 
 const store = configureStore({
 	reducer: {
 		counter: counterReducer,
-		asyncThunk: AsyncThunkReducer,
+		asyncThunk: asyncThunkReducer,
+		entityAdaptor: entityAdaptorReducer,
 	},
 })
 
